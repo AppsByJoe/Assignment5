@@ -40,11 +40,11 @@ class ConversionViewController: UIViewController {
         amountInEuro.isHidden = !euroIsVisible
         amountInYen.isHidden = !yenIsVisible
         amountInPeso.isHidden = !pesoIsVisible
-        amountInUsd.text = "$\(usdInputInt)"
-        amountInPound.text = "£\(poundConverted)"
-        amountInEuro.text = "€\(euroConverted)"
-        amountInYen.text = "¥\(yenConverted)"
-        amountInPeso.text = "MX$\(pesoConverted)"
+        amountInUsd.text = "$ \(usdInputInt)"
+        amountInPound.text = "£ \(poundConverted)"
+        amountInEuro.text = "€ \(euroConverted)"
+        amountInYen.text = "¥ \(yenConverted)"
+        amountInPeso.text = "MX$ \(pesoConverted)"
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {

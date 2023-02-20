@@ -49,7 +49,7 @@ class ViewController: UIViewController {
    
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        if usdInput.text! != "" {
+        if usdInput.text! != "" && validationSuccessful(usdInput.text!){
             usdInputInt = Int(usdInput.text!)!
             poundConverted = converterLogic.calculatePound(usdInputInt)
             euroConverted = converterLogic.calculateEuro(usdInputInt)
