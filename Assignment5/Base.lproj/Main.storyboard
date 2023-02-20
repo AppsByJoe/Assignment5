@@ -42,9 +42,6 @@
                                                         <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <action selector="usdUserInput:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="d63-bG-xah"/>
-                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -57,7 +54,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d17-Z7-An6">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="poundChange" translatesAutoresizingMaskIntoConstraints="NO" id="d17-Z7-An6">
                                                         <rect key="frame" x="284" y="0.0" width="51" height="33.333333333333336"/>
                                                         <connections>
                                                             <action selector="poundChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="9In-Qt-fq9"/>
@@ -74,7 +71,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qxw-mA-X3q">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="euroChange" translatesAutoresizingMaskIntoConstraints="NO" id="qxw-mA-X3q">
                                                         <rect key="frame" x="284" y="0.0" width="51" height="33.333333333333336"/>
                                                         <connections>
                                                             <action selector="euroChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="L6U-ZP-qNE"/>
@@ -91,7 +88,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugF-aH-hjG">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="yenChange" translatesAutoresizingMaskIntoConstraints="NO" id="ugF-aH-hjG">
                                                         <rect key="frame" x="284" y="0.0" width="51" height="33.333333333333336"/>
                                                         <connections>
                                                             <action selector="yenChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="3fR-Ku-vlC"/>
@@ -108,7 +105,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PAF-YM-BAC">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="pesoChange" translatesAutoresizingMaskIntoConstraints="NO" id="PAF-YM-BAC">
                                                         <rect key="frame" x="284" y="0.0" width="51" height="33"/>
                                                         <connections>
                                                             <action selector="pesoChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="cIu-tP-PO8"/>
@@ -139,7 +136,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="poundChange" destination="d17-Z7-An6" id="p9e-7q-4mk"/>
                         <outlet property="usdInput" destination="tjf-Ba-t1B" id="UUe-n5-QTw"/>
                         <segue destination="JIj-kg-gRN" kind="presentation" identifier="toConversion" id="aAm-gt-wd0"/>
                     </connections>

@@ -36,6 +36,10 @@ class ConversionViewController: UIViewController {
         euroLabel.isHidden = !euroIsVisible
         yenLabel.isHidden = !yenIsVisible
         pesoLabel.isHidden = !pesoIsVisible
+        amountInPound.isHidden = !poundIsVisible
+        amountInEuro.isHidden = !euroIsVisible
+        amountInYen.isHidden = !yenIsVisible
+        amountInPeso.isHidden = !pesoIsVisible
         amountInUsd.text = "$\(usdInputInt)"
         amountInPound.text = "£\(poundConverted)"
         amountInEuro.text = "€\(euroConverted)"
