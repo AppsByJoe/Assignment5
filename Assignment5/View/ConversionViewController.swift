@@ -8,7 +8,12 @@
 import UIKit
 
 class ConversionViewController: UIViewController {
-
+    
+    var poundIsVisible = true
+    var euroIsVisible = true
+    var yenIsVisible = true
+    var pesoIsVisible = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
