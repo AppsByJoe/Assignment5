@@ -42,6 +42,9 @@
                                                         <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <connections>
+                                                            <action selector="inputEntered:" destination="BYZ-38-t0r" eventType="editingChanged" id="sKy-1J-Pti"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
