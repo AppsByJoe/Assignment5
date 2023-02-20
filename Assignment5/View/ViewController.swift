@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     var euroIsVisible = true
     var yenIsVisible = true
     var pesoIsVisible = true
-    var poundConverted = 0
-    var euroConverted = 0
-    var yenConverted = 0
-    var pesoConverted = 0
+    var poundConverted = ""
+    var euroConverted = ""
+    var yenConverted = ""
+    var pesoConverted = ""
     
     
     @IBOutlet weak var usdInput: UITextField!
@@ -41,10 +41,10 @@ class ViewController: UIViewController {
     
     @IBAction func convert(_ sender: UIButton) {
         usdInputInt = Int(usdInput.text!)!
-        poundConverted = converterLogic.calculatePound(usdInput)
-        euroConverted = converterLogic.calculateEuro(usdInput)
-        yenConverted = converterLogic.calculateYen(usdInput)
-        pesoConverted = converterLogic.calculatePeso(usdInput)
+        poundConverted = converterLogic.calculatePound(usdInputInt)
+        euroConverted = converterLogic.calculateEuro(usdInputInt)
+        yenConverted = converterLogic.calculateYen(usdInputInt)
+        pesoConverted = converterLogic.calculatePeso(usdInputInt)
         self.performSegue(withIdentifier: "toConversion", sender: self)
     }
     

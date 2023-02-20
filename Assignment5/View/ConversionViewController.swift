@@ -14,10 +14,10 @@ class ConversionViewController: UIViewController {
     var euroIsVisible = true
     var yenIsVisible = true
     var pesoIsVisible = true
-    var poundConverted = 0
-    var euroConverted = 0
-    var yenConverted = 0
-    var pesoConverted = 0
+    var poundConverted = ""
+    var euroConverted = ""
+    var yenConverted = ""
+    var pesoConverted = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
