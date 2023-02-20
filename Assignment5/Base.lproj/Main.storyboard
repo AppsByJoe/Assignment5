@@ -42,6 +42,9 @@
                                                         <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="usdUserInput:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="d63-bG-xah"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -117,6 +120,9 @@
                                                 <rect key="frame" x="0.0" y="315.99999999999994" width="333" height="33.333333333333314"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Convert"/>
+                                                <connections>
+                                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9vJ-9M-Njd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -134,6 +140,7 @@
                     </view>
                     <connections>
                         <outlet property="poundChange" destination="d17-Z7-An6" id="p9e-7q-4mk"/>
+                        <outlet property="usdInput" destination="tjf-Ba-t1B" id="UUe-n5-QTw"/>
                         <segue destination="JIj-kg-gRN" kind="presentation" identifier="toConversion" id="aAm-gt-wd0"/>
                     </connections>
                 </viewController>

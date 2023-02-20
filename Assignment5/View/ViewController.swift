@@ -9,12 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // var converterLogic = ConverterLogic()
+    var usdInputInt = 0
+    var converterLogic = ConverterLogic()
     var poundIsVisible = true
     var euroIsVisible = true
     var yenIsVisible = true
     var pesoIsVisible = true
+    var poundConverted = 0
+    var euroConverted = 0
+    var yenConverted = 0
+    var pesoConverted = 0
     
+    
+    @IBOutlet weak var usdInput: UITextField!
+        
     @IBAction func poundChange(_ sender: UISwitch) {
         poundIsVisible = sender.isOn
     }
@@ -31,6 +39,15 @@ class ViewController: UIViewController {
         pesoIsVisible = sender.isOn
     }
     
+    @IBAction func convert(_ sender: UIButton) {
+        usdInputInt = Int(usdInput.text!)!
+        poundConverted = converterLogic.calculatePound(usdInput)
+        euroConverted = converterLogic.calculateEuro(usdInput)
+        yenConverted = converterLogic.calculateYen(usdInput)
+        pesoConverted = converterLogic.calculatePeso(usdInput)
+        self.performSegue(withIdentifier: "toConversion", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,10 +56,15 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toConversion" {
             let converterNavigation = segue.destination as! ConversionViewController
+            converterNavigation.usdInputInt = usdInputInt
             converterNavigation.poundIsVisible = poundIsVisible
             converterNavigation.euroIsVisible = euroIsVisible
             converterNavigation.yenIsVisible = yenIsVisible
             converterNavigation.pesoIsVisible = pesoIsVisible
+            converterNavigation.poundConverted = poundConverted
+            converterNavigation.euroConverted = euroConverted
+            converterNavigation.yenConverted = yenConverted
+            converterNavigation.pesoConverted = pesoConverted
         }
     }
 }

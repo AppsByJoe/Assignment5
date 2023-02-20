@@ -9,10 +9,15 @@ import UIKit
 
 class ConversionViewController: UIViewController {
     
+    var usdInputInt = 0
     var poundIsVisible = true
     var euroIsVisible = true
     var yenIsVisible = true
     var pesoIsVisible = true
+    var poundConverted = 0
+    var euroConverted = 0
+    var yenConverted = 0
+    var pesoConverted = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
