@@ -246,9 +246,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="xZK-O7-83W" secondAttribute="bottom" constant="30" id="tsa-aG-Y5u"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yvs-RT-e2F"/>
