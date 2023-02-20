@@ -19,13 +19,34 @@ class ConversionViewController: UIViewController {
     var yenConverted = ""
     var pesoConverted = ""
     
+    @IBOutlet weak var amountInUsd: UILabel!
+    @IBOutlet weak var poundLabel: UILabel!
+    @IBOutlet weak var amountInPound: UILabel!
+    @IBOutlet weak var euroLabel: UILabel!
+    @IBOutlet weak var amountInEuro: UILabel!
+    @IBOutlet weak var yenLabel: UILabel!
+    @IBOutlet weak var amountInYen: UILabel!
+    @IBOutlet weak var pesoLabel: UILabel!
+    @IBOutlet weak var amountInPeso: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        poundLabel.isHidden = !poundIsVisible
+        euroLabel.isHidden = !euroIsVisible
+        yenLabel.isHidden = !yenIsVisible
+        pesoLabel.isHidden = !pesoIsVisible
+        amountInUsd.text = "$\(usdInputInt)"
+        amountInPound.text = "£\(poundConverted)"
+        amountInEuro.text = "€\(euroConverted)"
+        amountInYen.text = "¥\(yenConverted)"
+        amountInPeso.text = "MX$\(pesoConverted)"
     }
     
-
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -35,5 +56,4 @@ class ConversionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
