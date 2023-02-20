@@ -26,7 +26,6 @@ class ViewController: UIViewController {
             let alert = UIAlertController(title: "Input Validation Error", message: "Please enter an Integer value.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            usdInput.text = ""
         }
     }
     
@@ -47,42 +46,17 @@ class ViewController: UIViewController {
     @IBAction func pesoChange(_ sender: UISwitch) {
         pesoIsVisible = sender.isOn
     }
+   
     
-    @IBAction func convert(_ sender: UIButton) throws {
-        usdInputInt = Int(usdInput.text!)!
-        poundConverted = converterLogic.calculatePound(usdInputInt)
-        euroConverted = converterLogic.calculateEuro(usdInputInt)
-        yenConverted = converterLogic.calculateYen(usdInputInt)
-        pesoConverted = converterLogic.calculatePeso(usdInputInt)
-        self.performSegue(withIdentifier: "toConversion", sender: self)
-        
-//        if validationSuccessful(usdInput.text!) {
-//            usdInputInt = Int(usdInput.text!)!
-//            poundConverted = converterLogic.calculatePound(usdInputInt)
-//            euroConverted = converterLogic.calculateEuro(usdInputInt)
-//            yenConverted = converterLogic.calculateYen(usdInputInt)
-//            pesoConverted = converterLogic.calculatePeso(usdInputInt)
-//            self.performSegue(withIdentifier: "toConversion", sender: self)
-//        } else {
-//            let alert = UIAlertController(title: "Input Validation Error", message: "Please enter an Integer value.", preferredStyle: UIAlertController.Style.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//            usdInput.text = ""
-//        }
-        
-//        do {
-//            usdInputInt = try Int(usdInput.text!)!
-//            poundConverted = converterLogic.calculatePound(usdInputInt)
-//            euroConverted = converterLogic.calculateEuro(usdInputInt)
-//            yenConverted = converterLogic.calculateYen(usdInputInt)
-//            pesoConverted = converterLogic.calculatePeso(usdInputInt)
-//            self.performSegue(withIdentifier: "toConversion", sender: self)
-//        } catch {
-//            let alert = UIAlertController(title: "Input Validation Error", message: "Please enter an Integer value.", preferredStyle: UIAlertController.Style.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//            usdInput.text = ""
-//        }
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        if usdInput.text! != "" {
+            usdInputInt = Int(usdInput.text!)!
+            poundConverted = converterLogic.calculatePound(usdInputInt)
+            euroConverted = converterLogic.calculateEuro(usdInputInt)
+            yenConverted = converterLogic.calculateYen(usdInputInt)
+            pesoConverted = converterLogic.calculatePeso(usdInputInt)
+            self.performSegue(withIdentifier: "toConversion", sender: self)
+        }
     }
     
     override func viewDidLoad() {
