@@ -14,6 +14,7 @@
 		ECFFE94029A2E29400C22A47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFFE93F29A2E29400C22A47 /* Assets.xcassets */; };
 		ECFFE94329A2E29400C22A47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFFE94129A2E29400C22A47 /* LaunchScreen.storyboard */; };
 		ECFFE94C29A2F63000C22A47 /* ConverterLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFFE94B29A2F63000C22A47 /* ConverterLogic.swift */; };
+		ECFFE95129A2F94300C22A47 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFFE95029A2F94300C22A47 /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		ECFFE94229A2E29400C22A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECFFE94429A2E29400C22A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECFFE94B29A2F63000C22A47 /* ConverterLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterLogic.swift; sourceTree = "<group>"; };
+		ECFFE95029A2F94300C22A47 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				ECFFE93A29A2E29300C22A47 /* ViewController.swift */,
+				ECFFE95029A2F94300C22A47 /* ConversionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECFFE93B29A2E29300C22A47 /* ViewController.swift in Sources */,
+				ECFFE95129A2F94300C22A47 /* ConversionViewController.swift in Sources */,
 				ECFFE94C29A2F63000C22A47 /* ConverterLogic.swift in Sources */,
 				ECFFE93729A2E29300C22A47 /* AppDelegate.swift in Sources */,
 				ECFFE93929A2E29300C22A47 /* SceneDelegate.swift in Sources */,
